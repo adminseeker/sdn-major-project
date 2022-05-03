@@ -1,0 +1,18 @@
+{
+    "dpid": 3,
+    "table_id": 0,
+    "idle_timeout": 0,
+    "hard_timeout": 0,
+    "priority": 100,
+    "match":{
+        "in_port":3,
+        "dl_src":"00:00:00:00:00:03",
+        "dl_dst":"00:00:00:00:00:06"
+    },
+    "actions":[
+        {
+            "type":"OUTPUT",
+            "port": 6
+        }
+    ]
+}
