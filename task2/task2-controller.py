@@ -21,6 +21,14 @@ class SimpleSwitch13(app_manager.RyuApp):
                             "SILVER":["00:00:00:00:00:03"]
                             }
 
+
+    def send_role_request(self, datapath, role, gen_id):
+        role = datapath.ofproto.OFPCR_ROLE_MASTER
+        ofp_parser = datapath.ofproto_parser
+        msg = ofp_parser.OFPRoleRequest(datapath, role, gen_id)
+        datapath.send_msg(msg)
+
+
     @set_ev_cls(ofp_event.EventOFPSwitchFeatures, CONFIG_DISPATCHER)
     def switch_features_handler(self, ev):
         datapath = ev.msg.datapath
@@ -31,7 +39,7 @@ class SimpleSwitch13(app_manager.RyuApp):
         self.datapaths[datapath.id] = datapath
 
         # install table-miss flow entry
-
+        self.send_role_request(datapath, ofproto.OFPCR_ROLE_MASTER, 0)
         match = parser.OFPMatch()
         actions = [parser.OFPActionOutput(ofproto.OFPP_CONTROLLER,
                                           ofproto.OFPCML_NO_BUFFER)]
