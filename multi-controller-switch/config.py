@@ -1,6 +1,6 @@
 
 
-
+threshold=30
 
 switches={
     1:{
@@ -9,7 +9,7 @@ switches={
     },
     2:{
         "name":"s2",
-        "master":"c2",
+        "master":"c1",
     },
     3:{
         "name":"s3",
@@ -17,9 +17,16 @@ switches={
     },
     4:{
         "name":"s4",
+        "master":"c1",
+    },
+    5:{
+        "name":"s5",
         "master":"c2",
     },
-
+    6:{
+        "name":"s6",
+        "master":"c2",
+    },
 }
 
 
@@ -59,7 +66,14 @@ c1={
             "name":"s4",
             "packet_in_count":0
         },
-       
+       5:{
+            "name":"s5",
+            "packet_in_count":0
+        },
+        6:{
+            "name":"s6",
+            "packet_in_count":0
+        },
     }
 }
 
@@ -83,6 +97,14 @@ c2={
         },
         4:{
             "name":"s4",
+            "packet_in_count":0
+        },
+        5:{
+            "name":"s5",
+            "packet_in_count":0
+        },
+        6:{
+            "name":"s6",
             "packet_in_count":0
         },
        

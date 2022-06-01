@@ -26,7 +26,7 @@ class SimpleSwitch13(app_manager.RyuApp):
         self.packet_in_count=0
         
         hub.spawn(self.role_requester)
-        hub.spawn(self.monitor_packets)
+        # hub.spawn(self.monitor_packets)
         self.controllers=pickle.loads(r.get("controllers"))
         self.switches=pickle.loads(r.get("switches"))
         (self.controller_name,self.controller_id)=self.get_current_controller()
@@ -165,8 +165,11 @@ class SimpleSwitch13(app_manager.RyuApp):
         src = eth.src
     
         dpid = format(datapath.id, "d").zfill(16)
-
+        
+        self.controller=pickle.loads(r.get(self.controller_name))
         self.controller['switches'][datapath.id]['packet_in_count']=self.controller['switches'][datapath.id]['packet_in_count']+1
+        pickled_ctrl=pickle.dumps(self.controller)
+        r.set(self.controller_name,pickled_ctrl)
         # print(self.controller)
       
         print("update from controller "+self.controller['name'])
@@ -208,7 +211,7 @@ class SimpleSwitch13(app_manager.RyuApp):
                 self.add_flow(datapath, 1, match, actions, msg.buffer_id,idle=5, hard=10)
                 return
             else:
-                self.add_flow(datapath, 1, match, actions,idle=5, hard=10)
+                self.add_flow(datapath, 1, match, actions,idle=1, hard=1)
         data = None
         if msg.buffer_id == ofproto.OFP_NO_BUFFER:
             data = msg.data
