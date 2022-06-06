@@ -1,6 +1,6 @@
 
 
-threshold=30
+threshold=50
 switches={
     1:{
         "name":"s1",
@@ -16,7 +16,7 @@ switches={
     },
     4:{
         "name":"s4",
-        "master":"c1",
+        "master":"c2",
     },
     5:{
         "name":"s5",
@@ -24,6 +24,58 @@ switches={
     },
     6:{
         "name":"s6",
+        "master":"c2",
+    },
+     7:{
+        "name":"s7",
+        "master":"c3",
+    },
+    8:{
+        "name":"s8",
+        "master":"c3",
+    },
+     9:{
+        "name":"s9",
+        "master":"c3",
+    },
+     10:{
+        "name":"s10",
+        "master":"c3",
+    },
+     11:{
+        "name":"s11",
+        "master":"c3",
+    },
+     12:{
+        "name":"s12",
+        "master":"c3",
+    },
+     13:{
+        "name":"s13",
+        "master":"c2",
+    },
+     14:{
+        "name":"s14",
+        "master":"c2",
+    },
+     15:{
+        "name":"s15",
+        "master":"c3",
+    },
+     16:{
+        "name":"s16",
+        "master":"c3",
+    },
+     17:{
+        "name":"s17",
+        "master":"c2",
+    },
+     18:{
+        "name":"s18",
+        "master":"c3",
+    },
+     19:{
+        "name":"s19",
         "master":"c2",
     },
 }
@@ -78,6 +130,58 @@ c1={
             "name":"s6",
             "packet_in_count":0
         },
+        7:{
+            "name":"s7",
+            "packet_in_count":0
+        },
+        8:{
+            "name":"s8",
+            "packet_in_count":0
+        },
+        9:{
+            "name":"s9",
+            "packet_in_count":0
+        },
+        10:{
+            "name":"s10",
+            "packet_in_count":0
+        },
+        11:{
+            "name":"s11",
+            "packet_in_count":0
+        },
+        12:{
+            "name":"s12",
+            "packet_in_count":0
+        },
+        13:{
+            "name":"s13",
+            "packet_in_count":0
+        },
+        14:{
+            "name":"s14",
+            "packet_in_count":0
+        },
+        15:{
+            "name":"s15",
+            "packet_in_count":0
+        },
+        16:{
+            "name":"s16",
+            "packet_in_count":0
+        },
+        17:{
+            "name":"s17",
+            "packet_in_count":0
+        },
+        18:{
+            "name":"s18",
+            "packet_in_count":0
+        },
+        19:{
+            "name":"s19",
+            "packet_in_count":0
+        },
     }
 }
 
@@ -111,7 +215,58 @@ c2={
             "name":"s6",
             "packet_in_count":0
         },
-       
+       7:{
+            "name":"s7",
+            "packet_in_count":0
+        },
+       8:{
+            "name":"s8",
+            "packet_in_count":0
+        },
+       9:{
+            "name":"s9",
+            "packet_in_count":0
+        },
+       10:{
+            "name":"s10",
+            "packet_in_count":0
+        },
+       11:{
+            "name":"s11",
+            "packet_in_count":0
+        },
+       12:{
+            "name":"s12",
+            "packet_in_count":0
+        },
+       13:{
+            "name":"s13",
+            "packet_in_count":0
+        },
+       14:{
+            "name":"s14",
+            "packet_in_count":0
+        },
+       15:{
+            "name":"s15",
+            "packet_in_count":0
+        },
+       16:{
+            "name":"s16",
+            "packet_in_count":0
+        },
+       17:{
+            "name":"s17",
+            "packet_in_count":0
+        },
+       18:{
+            "name":"s18",
+            "packet_in_count":0
+        },
+       19:{
+            "name":"s19",
+            "packet_in_count":0
+        },
     }
 }
 
@@ -145,6 +300,57 @@ c3={
             "name":"s6",
             "packet_in_count":0
         },
-       
+       7:{
+            "name":"s7",
+            "packet_in_count":0
+        },
+       8:{
+            "name":"s8",
+            "packet_in_count":0
+        },
+       9:{
+            "name":"s9",
+            "packet_in_count":0
+        },
+       10:{
+            "name":"s10",
+            "packet_in_count":0
+        },
+       11:{
+            "name":"s11",
+            "packet_in_count":0
+        },
+       12:{
+            "name":"s12",
+            "packet_in_count":0
+        },
+       13:{
+            "name":"s13",
+            "packet_in_count":0
+        },
+       14:{
+            "name":"s14",
+            "packet_in_count":0
+        },
+       15:{
+            "name":"s15",
+            "packet_in_count":0
+        },
+       16:{
+            "name":"s16",
+            "packet_in_count":0
+        },
+       17:{
+            "name":"s17",
+            "packet_in_count":0
+        },
+       18:{
+            "name":"s18",
+            "packet_in_count":0
+        },
+       19:{
+            "name":"s19",
+            "packet_in_count":0
+        },
     }
 }

@@ -35,7 +35,7 @@ while True:
                 # print(ctrls_db)
 
                 print("Switch "+switch_name+" from controller "+controller['name']+" has packet count set to 0")
-        print("---------------------------------------------------------------------")
+        # print("---------------------------------------------------------------------")
     
 
     time.sleep(unload_time)
