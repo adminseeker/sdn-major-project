@@ -1,7 +1,6 @@
 
 
 threshold=30
-
 switches={
     1:{
         "name":"s1",
@@ -41,6 +40,11 @@ controllers={
         "id":2,
         "name":"c2",
         "port":"6634",  
+        },
+    3:{
+        "id":3,
+        "name":"c3",
+        "port":"6635",  
     }
 }
 
@@ -111,3 +115,36 @@ c2={
     }
 }
 
+c3={
+    
+    "id":3,
+    "name":"c3",
+    "port":"6635",
+    "switches":{
+        1:{
+            "name":"s1",
+            "packet_in_count":0
+        },
+        2:{
+            "name":"s2",
+            "packet_in_count":0
+        },
+        3:{
+            "name":"s3",
+            "packet_in_count":0
+        },
+        4:{
+            "name":"s4",
+            "packet_in_count":0
+        },
+        5:{
+            "name":"s5",
+            "packet_in_count":0
+        },
+        6:{
+            "name":"s6",
+            "packet_in_count":0
+        },
+       
+    }
+}

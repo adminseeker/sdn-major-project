@@ -4,6 +4,7 @@ import algorithm
 def handle_migration(red,ctrls,swths,threshold):
     ctrls_arr=list(ctrls.values())
     premigration,migration=algorithm.select_migration(ctrls_arr,threshold)
+    print(premigration,migration)
     if list(premigration.keys())[0]=="msg" or list(migration.keys())[0]=='msg':
         print(premigration)
         return

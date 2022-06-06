@@ -16,6 +16,7 @@ pickled_threshold=pickle.dumps(threshold)
 
 pickled_c1=pickle.dumps(c1)
 pickled_c2=pickle.dumps(c2)
+pickled_c3=pickle.dumps(c3)
 
 mac_to_port={}
 pickled_mac_to_port=pickle.dumps(mac_to_port)
@@ -25,6 +26,7 @@ r.set("mac_to_port",pickled_mac_to_port)
 r.set("controllers",pickled_controllers)
 r.set("c1",pickled_c1)
 r.set("c2",pickled_c2)
+r.set("c3",pickled_c3)
 r.set("switches",pickled_switches)
 r.set("threshold",pickled_threshold)
 
