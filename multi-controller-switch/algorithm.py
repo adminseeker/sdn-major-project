@@ -7,6 +7,11 @@ import random
 
 # c3={'id': 3, 'name': 'c3', 'port': '6635', 'switches': {1: {'name': 's1', 'packet_in_count': 10}, 2: {'name': 's2', 'packet_in_count': 15}, 3: {'name': 's3', 'packet_in_count': 0}, 4: {'name': 's4', 'packet_in_count': 10}, 5: {'name': 's5', 'packet_in_count': 0}, 6: {'name': 's6', 'packet_in_count': 0}}}
 
+
+algorithms=['random','bestfit']
+
+selected_algorithm=algorithms[1]
+
 def total_packet_in_count(controller):
     sum=0
     for switch in controller['switches'].values():
@@ -76,7 +81,8 @@ def select_migration(controllers,threshold):
 
     available_ctrl={}
     busy_ctrl[list(busy_controllers.keys())[rand_busy]]=busy_controllers[list(busy_controllers.keys())[rand_busy]]
-    # available_ctrl[list(available_controllers.keys())[rand_available]]=available_controllers[list(available_controllers.keys())[rand_available]]
+    if selected_algorithm=="random":
+        available_ctrl[list(available_controllers.keys())[rand_available]]=available_controllers[list(available_controllers.keys())[rand_available]]
     busy_controller={}
     # available_controller={}
     for c in controllers:
@@ -86,7 +92,8 @@ def select_migration(controllers,threshold):
             # available_controller=c
 
     busy_switch=select_busy_switch(busy_controller)
-    available_ctrl = select_best_available_controller(available_controllers,threshold,busy_switch)
+    if selected_algorithm=="bestfit":
+        available_ctrl = select_best_available_controller(available_controllers,threshold,busy_switch)
     if len(available_ctrl) == 0:
         err["msg"].append("No best available controller")
         return (err,err)

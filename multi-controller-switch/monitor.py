@@ -3,6 +3,19 @@ import pickle
 from config import *
 import time
 import migration
+import os
+import algorithm
+
+try:
+    if algorithm.selected_algorithm=="random":
+        f = open("random_migrations.txt","r")
+        os.system("rm random_migrations.txt")
+        
+    elif algorithm.selected_algorithm=="bestfit":    
+        f = open("bestfit_migrations.txt","r")
+        os.system("rm bestfit_migrations.txt")
+except:
+    pass
 
 
 r=redis.Redis(host="127.0.0.1",port=6379)

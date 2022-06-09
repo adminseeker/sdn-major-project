@@ -1,6 +1,6 @@
 
 
-threshold=50
+threshold=500
 switches={
     1:{
         "name":"s1",

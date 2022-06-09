@@ -4,14 +4,27 @@ import algorithm
 def handle_migration(red,ctrls,swths,threshold):
     ctrls_arr=list(ctrls.values())
     premigration,migration=algorithm.select_migration(ctrls_arr,threshold)
-    print(premigration,migration)
+    
     if list(premigration.keys())[0]=="msg" or list(migration.keys())[0]=='msg':
         print(premigration)
         return
     
+    
+
     premigration_controller=list(premigration.values())[0]
     migration_switch=list(migration.keys())[0]
     migration_controller=list(migration.values())[0]
+
+    filename=""
+    if algorithm.selected_algorithm=="random":
+        filename="random_migrations.txt"
+    elif algorithm.selected_algorithm=="bestfit":
+        filename="bestfit_migrations.txt"
+    
+    f = open(filename,"a")
+    f.write("migration of switch "+migration_switch+" from controller "+premigration_controller+" to controller "+migration_controller+"\n")
+    f.close()
+
     s=pickle.loads(red.get('switches'))
     for i in s.values():
         if i['name']==migration_switch:
