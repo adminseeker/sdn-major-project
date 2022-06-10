@@ -1,6 +1,0 @@
-migration of switch s18 from controller c3 to controller c2
-migration of switch s19 from controller c2 to controller c1
-migration of switch s16 from controller c3 to controller c1
-migration of switch s17 from controller c2 to controller c1
-migration of switch s15 from controller c3 to controller c1
-migration of switch s18 from controller c2 to controller c1

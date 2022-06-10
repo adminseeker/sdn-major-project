@@ -95,10 +95,15 @@ if __name__ == '__main__':
     c3 = RemoteController('c3', ip='127.0.0.1',port=6635)
     net = Mininet(topo=topo, controller=[c1,c2,c3])
     net.start()
-    # h1=net.get('h1')
-    # h2=net.get('h2')
-    # h3=net.get('h3')
+    
+    h1=net.get('h1')
+    h2=net.get('h2')
+    h3=net.get('h3')
     # h4=net.get('h4')
+    sleep(5)
+    h1.cmd('ping -c 50 192.168.1.4')
+    h2.cmd('ping -c 50 192.168.1.5')
+   
   
 
     # h1.cmd('arp -s 192.168.1.2 00:00:00:00:00:02')
