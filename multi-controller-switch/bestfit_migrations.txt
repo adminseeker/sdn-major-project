@@ -1,1 +1,2 @@
 bestfit migration of switch s17 from controller c2 to controller c1 at threshold: 250 PACKET_IN Counts in runtime: 240 seconds
+bestfit migration of switch s13 from controller c2 to controller c1 at threshold: 250 PACKET_IN Counts in runtime: 240 seconds
