@@ -1,6 +1,6 @@
 
-
-threshold=500
+run_time=240
+threshold=250
 switches={
     1:{
         "name":"s1",

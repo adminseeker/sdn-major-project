@@ -4,7 +4,11 @@ from mininet.net import Mininet
 from mininet.log import setLogLevel
 from mininet.cli import CLI
 from mininet.node import OVSSwitch, Controller, RemoteController
-from time import sleep
+import time
+import redis
+import pickle
+
+r=redis.Redis(host="127.0.0.1",port=6379)
 
 
 
@@ -99,11 +103,30 @@ if __name__ == '__main__':
     h1=net.get('h1')
     h2=net.get('h2')
     h3=net.get('h3')
+    h4=net.get('h4')
+    h5=net.get('h5')
+    h6=net.get('h6')
+    h7=net.get('h7')
+    h8=net.get('h8')
+    h9=net.get('h9')
+    h10=net.get('h10')
+    h11=net.get('h11')
+    h12=net.get('h12')
     # h4=net.get('h4')
-    sleep(5)
-    h1.cmd('ping -c 50 192.168.1.4')
-    h2.cmd('ping -c 50 192.168.1.5')
-   
+    time.sleep(5)
+    
+
+    #set start_time
+    r.set("start_time",pickle.dumps(time.time()))
+
+
+    h1.cmd('ping 192.168.1.4 &')
+    h2.cmd('ping 192.168.1.7 &')
+    h3.cmd('ping 192.168.1.10 &')
+
+    #h5.cmd('ping 192.168.1.8 &')
+    #h6.cmd('ping 192.168.1.9 &')
+    
   
 
     # h1.cmd('arp -s 192.168.1.2 00:00:00:00:00:02')
