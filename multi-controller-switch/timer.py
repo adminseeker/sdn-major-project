@@ -6,10 +6,11 @@ import pickle
 
 r=redis.Redis(host="127.0.0.1",port=6379)
 
-time.sleep(5)
+# time.sleep(5)
 
 
-start_time=pickle.loads(r.get("start_time"))
+# start_time=pickle.loads(r.get("start_time"))
+start_time=time.time()
 run_time=config.run_time
 
 

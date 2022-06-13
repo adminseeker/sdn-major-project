@@ -113,16 +113,16 @@ if __name__ == '__main__':
     h11=net.get('h11')
     h12=net.get('h12')
     # h4=net.get('h4')
-    time.sleep(5)
+    # time.sleep(5)
     
 
     #set start_time
-    r.set("start_time",pickle.dumps(time.time()))
+    # r.set("start_time",pickle.dumps(time.time()))
 
 
-    h10.cmd('ping 192.168.1.1 &')
-    h11.cmd('ping 192.168.1.4 &')
-    h12.cmd('ping 192.168.1.7 &')
+    # h10.cmd('ping 192.168.1.1 &')
+    # h11.cmd('ping 192.168.1.4 &')
+    # h12.cmd('ping 192.168.1.7 &')
 
     #h5.cmd('ping 192.168.1.8 &')
     #h6.cmd('ping 192.168.1.9 &')
