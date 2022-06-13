@@ -10,7 +10,7 @@ import random
 
 algorithms=['random','bestfit']
 
-selected_algorithm=algorithms[1]
+selected_algorithm=algorithms[0]
 
 def total_packet_in_count(controller):
     sum=0

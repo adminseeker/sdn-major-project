@@ -120,9 +120,9 @@ if __name__ == '__main__':
     r.set("start_time",pickle.dumps(time.time()))
 
 
-    h1.cmd('ping 192.168.1.4 &')
-    h2.cmd('ping 192.168.1.7 &')
-    h3.cmd('ping 192.168.1.10 &')
+    h10.cmd('ping 192.168.1.1 &')
+    h11.cmd('ping 192.168.1.4 &')
+    h12.cmd('ping 192.168.1.7 &')
 
     #h5.cmd('ping 192.168.1.8 &')
     #h6.cmd('ping 192.168.1.9 &')
