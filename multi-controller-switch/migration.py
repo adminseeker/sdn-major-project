@@ -1,6 +1,7 @@
 import pickle
 import algorithm
 import config
+import time
 
 def handle_migration(red,ctrls,swths,threshold):
     ctrls_arr=list(ctrls.values())
@@ -23,7 +24,7 @@ def handle_migration(red,ctrls,swths,threshold):
         filename="bestfit_migrations.txt"
     
     f = open(filename,"a")
-    f.write(algorithm.selected_algorithm + " migration of switch "+migration_switch+" from controller "+premigration_controller+" to controller "+migration_controller+" at threshold: "+str(config.threshold)+" PACKET_IN Counts in runtime: " +str(config.run_time) +" seconds\n")
+    f.write(algorithm.selected_algorithm + " migration of switch "+migration_switch+" from controller "+premigration_controller+" to controller "+migration_controller+" at threshold: "+str(config.threshold)+" PACKET_IN Counts in runtime: " +str(config.run_time) +" seconds at time "+str(int(time.time()-config.start_time))+"\n")
     f.close()
 
     s=pickle.loads(red.get('switches'))

@@ -10,6 +10,7 @@ intervals=[]
 c1_load=[]
 c2_load=[]
 c3_load=[]
+sum_load=[]
 threshold_arr=[]
 
 
@@ -31,23 +32,45 @@ for line in f1_lines:
     threshold_arr.append(threshold)
     load=line.strip().split(" ")[1]
     c1_load.append(int(load))
+    sum_load.append(int(load))
 
+i=0
 for line in f2_lines:
     load=line.strip().split(" ")[1]
     c2_load.append(int(load))
+    sum_load[i]+=int(load)
+    i=i+1
 
+i=0
 for line in f3_lines:
     load=line.strip().split(" ")[1]
     c3_load.append(int(load))
+    sum_load[i]+=int(load)
+    i=i+1
 
+# print(sum_load)
+
+c1_load_percent=[]
+c2_load_percent=[]
+c3_load_percent=[]
+
+for i in range(len(sum_load)):
+    c1_load_p=(c1_load[i]/sum_load[i])*100
+    c1_load_percent.append(c1_load_p)
+    c2_load_p=(c2_load[i]/sum_load[i])*100
+    c2_load_percent.append(c2_load_p)
+    c3_load_p=(c3_load[i]/sum_load[i])*100
+    c3_load_percent.append(c3_load_p)
+
+# print(c1_load_percent)
 
 # plot lines
-plt.plot(intervals, c1_load, label = "c1")
-plt.plot(intervals, c2_load, label = "c2")
-plt.plot(intervals, c3_load, label = "c3")
-plt.plot(intervals, threshold_arr, label = "threshold")
+plt.plot(intervals, c1_load_percent, label = "c1")
+plt.plot(intervals, c2_load_percent, label = "c2")
+plt.plot(intervals, c3_load_percent, label = "c3")
+# plt.plot(intervals, threshold_arr, label = "threshold")
 plt.xlabel('Time', fontweight ='bold', fontsize = 10)
-plt.ylabel('load (PACKET_IN count)', fontweight ='bold', fontsize = 10)
+plt.ylabel('load (%)', fontweight ='bold', fontsize = 10)
 
 
 plt.legend()

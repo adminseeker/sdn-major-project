@@ -1,9 +1,6 @@
-import time
 
-
-run_time=960
-threshold=500
-start_time=time.time()
+run_time=1000
+threshold=3000
 switches={
     1:{
         "name":"s1",
@@ -31,7 +28,7 @@ switches={
     },
      7:{
         "name":"s7",
-        "master":"c2",
+        "master":"c3",
     },
     8:{
         "name":"s8",
@@ -43,15 +40,15 @@ switches={
     },
      10:{
         "name":"s10",
-        "master":"c2",
+        "master":"c3",
     },
      11:{
         "name":"s11",
-        "master":"c2",
+        "master":"c3",
     },
      12:{
         "name":"s12",
-        "master":"c1",
+        "master":"c3",
     },
      13:{
         "name":"s13",
@@ -59,13 +56,28 @@ switches={
     },
      14:{
         "name":"s14",
-        "master":"c3",
+        "master":"c2",
     },
      15:{
         "name":"s15",
         "master":"c3",
     },
-  
+     16:{
+        "name":"s16",
+        "master":"c3",
+    },
+     17:{
+        "name":"s17",
+        "master":"c2",
+    },
+     18:{
+        "name":"s18",
+        "master":"c3",
+    },
+     19:{
+        "name":"s19",
+        "master":"c2",
+    },
 }
 
 
@@ -154,7 +166,22 @@ c1={
             "name":"s15",
             "packet_in_count":0
         },
-       
+        16:{
+            "name":"s16",
+            "packet_in_count":0
+        },
+        17:{
+            "name":"s17",
+            "packet_in_count":0
+        },
+        18:{
+            "name":"s18",
+            "packet_in_count":0
+        },
+        19:{
+            "name":"s19",
+            "packet_in_count":0
+        },
     }
 }
 
@@ -223,7 +250,23 @@ c2={
        15:{
             "name":"s15",
             "packet_in_count":0
-       },
+        },
+       16:{
+            "name":"s16",
+            "packet_in_count":0
+        },
+       17:{
+            "name":"s17",
+            "packet_in_count":0
+        },
+       18:{
+            "name":"s18",
+            "packet_in_count":0
+        },
+       19:{
+            "name":"s19",
+            "packet_in_count":0
+        },
     }
 }
 
@@ -293,6 +336,21 @@ c3={
             "name":"s15",
             "packet_in_count":0
         },
-
+       16:{
+            "name":"s16",
+            "packet_in_count":0
+        },
+       17:{
+            "name":"s17",
+            "packet_in_count":0
+        },
+       18:{
+            "name":"s18",
+            "packet_in_count":0
+        },
+       19:{
+            "name":"s19",
+            "packet_in_count":0
+        },
     }
 }

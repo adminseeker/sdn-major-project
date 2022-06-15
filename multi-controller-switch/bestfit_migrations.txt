@@ -1,5 +1,1 @@
-bestfit migration of switch s16 from controller c3 to controller c2 at threshold: 3000 PACKET_IN Counts in runtime: 600 seconds
-bestfit migration of switch s18 from controller c3 to controller c1 at threshold: 3000 PACKET_IN Counts in runtime: 600 seconds
-bestfit migration of switch s17 from controller c2 to controller c3 at threshold: 3000 PACKET_IN Counts in runtime: 600 seconds
-bestfit migration of switch s19 from controller c2 to controller c1 at threshold: 3000 PACKET_IN Counts in runtime: 600 seconds
-bestfit migration of switch s10 from controller c3 to controller c2 at threshold: 3000 PACKET_IN Counts in runtime: 600 seconds
+bestfit migration of switch s13 from controller c2 to controller c3 at threshold: 500 PACKET_IN Counts in runtime: 960 seconds at time 100

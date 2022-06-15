@@ -1,0 +1,14 @@
+random migration of switch s13 from controller c2 to controller c3 at threshold: 2000 PACKET_IN Counts in runtime: 960 seconds at time 310
+random migration of switch s12 from controller c1 to controller c3 at threshold: 2000 PACKET_IN Counts in runtime: 960 seconds at time 360
+random migration of switch s8 from controller c3 to controller c1 at threshold: 2000 PACKET_IN Counts in runtime: 960 seconds at time 461
+random migration of switch s10 from controller c2 to controller c1 at threshold: 2000 PACKET_IN Counts in runtime: 960 seconds at time 511
+random migration of switch s13 from controller c3 to controller c2 at threshold: 2000 PACKET_IN Counts in runtime: 960 seconds at time 521
+random migration of switch s4 from controller c2 to controller c1 at threshold: 2000 PACKET_IN Counts in runtime: 960 seconds at time 601
+random migration of switch s1 from controller c1 to controller c2 at threshold: 2000 PACKET_IN Counts in runtime: 960 seconds at time 611
+random migration of switch s12 from controller c3 to controller c2 at threshold: 2000 PACKET_IN Counts in runtime: 960 seconds at time 631
+random migration of switch s6 from controller c2 to controller c1 at threshold: 2000 PACKET_IN Counts in runtime: 960 seconds at time 681
+random migration of switch s2 from controller c1 to controller c2 at threshold: 2000 PACKET_IN Counts in runtime: 960 seconds at time 721
+random migration of switch s11 from controller c2 to controller c1 at threshold: 2000 PACKET_IN Counts in runtime: 960 seconds at time 761
+random migration of switch s3 from controller c1 to controller c2 at threshold: 2000 PACKET_IN Counts in runtime: 960 seconds at time 842
+random migration of switch s13 from controller c2 to controller c3 at threshold: 2000 PACKET_IN Counts in runtime: 960 seconds at time 852
+random migration of switch s15 from controller c3 to controller c2 at threshold: 2000 PACKET_IN Counts in runtime: 960 seconds at time 922
